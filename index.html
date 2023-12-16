@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <style>
+      #count {
+        color: white;
+        font-size: 50px;
+        font-family: 'Dosis', sans-serif;
+      }
+
+      body {
+        display: flex;
+        height:95vh;
+        justify-content:center;
+        align-items:center;
+        background-color: purple;
+        background-image: url("https://external-preview.redd.it/tVHQNTB-3iivZ0QhRM8xmJ9mur-LMl-xerj3cQ_j4-s.jpg?auto=webp&s=0e275bcc6dd42f66255eb2bf8a1e528b7179c48a")
+      }
+
+    </style>
+    <script>
+      let x = 0;
+      function handleClick() {
+        setInterval(()=>{
+          x++;
+          let d = new Date();
+          $("#count").text(d.toLocaleTimeString())
+        }, 1000);
+      }
+
+      window.onload = handleClick();
+    </script>
+  </head>
+<body>
+  <div id="count">0</div>
+</body>
+</html>
